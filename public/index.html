@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>University Feedback System</h1>
+    </header>
+    <main>
+        <div id="registration" class="form-container" style="display:none;">
+            <h2>Register</h2>
+            <div id="regError" class="error-message" style="display:none;"></div>
+            <div id="regSuccess" class="success-message" style="display:none;">
+                Registration successful! Redirecting to login...
+            </div>
+            <form id="registrationForm">
+                <label for="regEmail">Email ID</label>
+                <input type="email" id="regEmail" placeholder="Email ID" required>
+                <label for="regRegistrationNumber">College Registration Number</label>
+                <input type="text" id="regRegistrationNumber" placeholder="College Registration Number" required>
+                <label for="regBranch">Branch</label>
+                <input type="text" id="regBranch" placeholder="Branch" required>
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </div>
+        <div id="login" class="form-container">
+            <h2>Login</h2>
+            <div id="loginError" class="error-message" style="display:none;"></div>
+            <form id="loginForm">
+                <label for="loginEmail">Email ID</label>
+                <input type="email" id="loginEmail" placeholder="Email ID" required>
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>New User? <a href="#" id="showRegister">Register here</a></p>
+        </div>
+        <div id="feedback" class="form-container" style="display:none;">
+            <h2>Submit Feedback</h2>
+            <div id="feedbackError" class="error-message" style="display:none;"></div>
+            <label for="whoAreYou">Who are you?</label>
+            <select id="whoAreYou" required>
+                <option value="">Select Type</option>
+                <option value="Student">Student</option>
+                <option value="Faculty">Faculty</option>
+                <option value="Alumni">Alumni</option>
+                <option value="Visitor">Visitor</option>
+            </select>
+            <label for="onWhom">Select Professor</label>
+            <select id="onWhom" required>
+                <option value="">Select Professor</option>
+            </select>
+            <label for="subject">Select Subject</label>
+            <select id="subject" required>
+                <option value="">Select Subject</option>
+            </select>
+            <div id="questions-container"></div>
+            <div class="additional-feedback">
+                <label for="additionalFeedback">Any Additional Feedback (up to 1000 words)</label>
+                <textarea id="additionalFeedback" maxlength="1000" rows="5" placeholder="Share your additional thoughts here..."></textarea>
+                <div class="word-count">0/1000 words</div>
+            </div>
+            <button id="submitFeedback" class="submit-btn">Submit Feedback</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
