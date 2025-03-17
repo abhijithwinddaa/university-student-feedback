@@ -1,0 +1,277 @@
+/* CourseCard.css */
+.course-card {
+  background-color: transparent; /* Remove background */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center; /* Center the button */
+  margin-top: 10px; /* Add space from other content */
+}
+
+.course-info {
+  margin-bottom: 10px;
+}
+
+.course-info p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.course-info b {
+  font-weight: bold;
+  color: #007bff; /* Example primary color */
+}
+
+.give-feedback-button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.give-feedback-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Feedback Modal Styles */
+.feedback-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.feedback-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Increased from 80% */
+  max-width: 800px; /* Increased from 600px */
+  color: black; /* Ensure all text is black */
+  max-height: 85vh; /* Increased from 80vh */
+  overflow-y: auto;
+}
+
+/* Ensure all text elements have black color by default */
+.feedback-content h1, 
+.feedback-content h2, 
+.feedback-content h3, 
+.feedback-content h4, 
+.feedback-content h5, 
+.feedback-content h6, 
+.feedback-content p, 
+.feedback-content label, 
+.feedback-content span, 
+.feedback-content div {
+  color: black;
+  font-size: 0.95rem; /* Slightly decreased font size */
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.feedback-title {
+  font-size: 1.4rem; /* Slightly decreased from 1.5rem */
+  color: black;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff0000;
+  border: none;
+  background: none;
+}
+
+.close-button:hover {
+  color: #cc0000;
+}
+
+.feedback-tabs {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.tab-button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  margin-right: 5px;
+  border-bottom: none; /* Remove bottom border to connect with content */
+  color: black; /* Ensure tab text is black */
+}
+
+.tab-button.active {
+  background-color: white;
+  border-bottom: 2px solid white; /* Overlap border to appear connected */
+  color: black; /* Active tab text color */
+}
+
+.tab-button:hover {
+  background-color: #eee;
+}
+
+.feedback-instructions {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.feedback-instructions p {
+  margin: 5px 0;
+  color: black;
+  font-weight: 500;
+}
+
+.feedback-questions {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 5px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.question {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.question.answered {
+  background-color: #f9f9f9;
+}
+
+.question-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.question-text {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: black;
+  flex: 1 0 70%;
+  font-size: 0.95rem; /* Slightly decreased font size */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.rating-input {
+  width: 60px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}
+
+/* Next button - keeping this with white text as requested */
+.submit-rating {
+  background-color: #4CAF50;
+  color: white; /* White text for the Next button */
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-rating:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Rating display - can have different styling */
+.rating-display {
+  padding: 5px 10px;
+  background-color: #e9f7ef;
+  border-radius: 4px;
+  color: #4CAF50; /* Different color for rating display */
+}
+
+.rating-display p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.optional-feedback {
+  margin-bottom: 20px;
+}
+
+.optional-feedback h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.feedback-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  color: black;
+  min-height: 100px;
+}
+
+.feedback-textarea::placeholder {
+  color: #666; /* Darker placeholder text for better visibility */
+}
+
+.submit-feedback {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-feedback:hover {
+  background-color: #45a049;
+}
+
+.submit-feedback.submitting {
+  background-color: #cccccc;
+  cursor: wait;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
+}

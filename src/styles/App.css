@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1e3c72, #ffd700);
+  font-family: sans-serif;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+.button-group {
+  display: flex;
+  gap: 20px; /* Added gap for spacing */
+}
+
+.home-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white; /* White text */
+  margin: 10px; /* Added margin */
+}
+
+.student-button { /* Style for STUDENT button */
+  background-color: #2563eb; /* Blue */
+}
+
+.student-button:hover {
+  background-color: #1d4ed8; /* Darker Blue */
+}
+
+.admin-button { /* Style for ADMIN button */
+  background-color: #16a34a; /* Green */
+}
+
+.admin-button:hover {
+  background-color: #15803d; /* Darker Green */
+}
+
+.login-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: 0 auto; /* Center horizontally */
+  position: absolute; /* Enable vertical centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center vertically and horizontally */
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #16a34a; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #15803d; /* Darker Green */
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dashboard {
+  background-color: #f8fafc; /* Light white */
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text within the dashboard */
+  background: linear-gradient(to bottom, #1e3c72, #ffd700); /* Blue-Yellow gradient */
+}
+
+.dashboard h2 {
+  color: white; /* Green text */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dashboard p {
+  color: white; /* Gray text */
+  margin-bottom: 20px;
+}
+
+.year-selector {
+  margin-bottom: 10px;
+}
+
+.semester-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px; /* Added padding */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent; /* Removed background color */
+}
+
+.semester-buttons button {
+  background-color: #16a34a; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.semester-buttons button:hover {
+  background-color: #15803d; /* Darker Green */
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 10px; /* Added padding */
+  border-radius: 8px; /* Rounded corners */
+  background-color: white; /* White background */
+  border: 1px solid #ccc; /* Added border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.profile-section h2, .profile-section p {
+  color: #16a34a; /* Green text color for profile section */
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin-top: 0;
+}
+
+.year-selector,
+.semester-buttons {
+  margin-bottom: 20px;
+}
+
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.subject-card {
+  background-color: #1e3c72; /* Dark Blue */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc; /* Added border */
+}
+
+.feedback-button {
+  background-color: #ffd700; /* Yellow */
+  color: white; /* Blue */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-button:hover {
+  background-color: #ffed4a; /* Lighter Yellow */
+}
+
+/* Feedback Modal Styles */
+.feedback-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.feedback-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.close-button {
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+  border: none;
+  background: none;
+}
+
+.professor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.professor-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  object-fit: cover;
+}
+
+.feedback-questions {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.submit-feedback {
+  padding: 10px 20px;
+  background-color: #2563eb; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-feedback:hover {
+  background-color: #1d4ed8; /* Darker Blue */
+}
+.dashboard, body {
+  background: linear-gradient(to bottom, #1e3c72, #ffd700);
+}
+
+/* Add these styles for the logout button in student dashboard */
+.dashboard-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
